@@ -14,18 +14,21 @@
 }
 
 .App-header {
-  background-color: #feda96;
+  background-image: url("/holo_silver_2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #e50301;
+  color: #FD9401;
 }
 
 .App-link {
-  color: #fa8988;
+  color: #1D1927;
 }
 
 @keyframes App-logo-spin {

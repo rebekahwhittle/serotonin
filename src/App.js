@@ -5,6 +5,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div>
+          <div>
+            <image href="%PUBLIC_URL%/backgroundimage.png"></image>
+          </div>
+        </div>
         <p>
           ✨spare serotonin ma'am 🥺
         </p>
