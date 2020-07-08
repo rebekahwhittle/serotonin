@@ -13,7 +13,6 @@ function serotonin() {
         </div>
 
         <div className="box">
-          <p>✨spare serotonin ma'am 🥺</p>
           <Television />
         </div>
       </header>

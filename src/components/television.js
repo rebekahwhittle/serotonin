@@ -6,8 +6,10 @@ import "../styles/main.scss";
 function television() {
   return (
     <div className="App">
-        <div className="">
-          <p>📺 telley time</p>
+        <div className="flex column television-outline">
+            <div className="televsion-screen"></div>
+            <div className="television-controls"></div>
+
         </div>
     </div>
   );
