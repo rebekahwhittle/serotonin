@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/main.scss";
+import Television from "./television";
 
 function serotonin() {
   return (
@@ -13,6 +14,7 @@ function serotonin() {
 
         <div className="box">
           <p>✨spare serotonin ma'am 🥺</p>
+          <Television />
         </div>
       </header>
     </div>
