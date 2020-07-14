@@ -59,6 +59,7 @@ code {
         margin: 0 auto;
         position: relative;
         top: 45px;
+        background-image: radial-gradient(1em 1em at 22% 19%,#fff 25%,#fff0), radial-gradient(4em 1.5em at 35% 17%,#fff 35%,#fff0), radial-gradient(1em 1em at 82% 24%,#fff 25%,#fff0), radial-gradient(100% 175% at 50% 50%,#0000 32%,#000 60%), radial-gradient(175% 100% at 50% 53%,#0000 32%,#000 60%);
     }
 
     .television-controls {
@@ -96,3 +97,5 @@ code {
 .left {
     transform: rotate(-20deg);
 }
+
+// TV Legs
