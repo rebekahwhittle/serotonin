@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-image: url("/holo_silver_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #fd9401;
+}
+
+.App-link {
+    color: #1d1927;
+}
+
+// TV
+
+.television-outline {
+    height: 480px;
+    width: 700px;
+    background-color: pink;
+    border: 4px solid black;
+    border-radius: 19px;
+
+    .televsion-screen {
+        height: 368px;
+        width: 75%;
+        background-color: white;
+        border: 4px solid black;
+        border-radius: 72px;
+        margin: 0 auto;
+        position: relative;
+        top: 45px;
+        // Alt shadow -- lighter 👇🏼
+        background-image: radial-gradient(1em 1em at 10% 11%, #fff 25%, #fff0), radial-gradient(4em 1.5em at 18% 16%, #fff 35%, #fff0), radial-gradient(1em 1em at 92% 90%, #fff 27%, #fff0), radial-gradient(100% 175% at 50% 50%, #0000 41%, #000 100%), radial-gradient(175% 100% at 50% 53%, #0000 39%, #000 90%);
+        // background-image: radial-gradient(1em 1em at 22% 19%, #fff 25%, #fff0), radial-gradient(4em 1.5em at 35% 17%, #fff 35%, #fff0), radial-gradient(1em 1em at 82% 24%, #fff 25%, #fff0), radial-gradient(100% 175% at 50% 50%, #0000 32%, #000 60%), radial-gradient(175% 100% at 50% 53%, #0000 32%, #000 60%);
+    }
+
+    .television-controls {
+        height: 326px;
+        width: 20%;
+        border: 4px solid black;
+        background-color: lightgoldenrodyellow;
+        border-radius: 6px;
+        position: relative;
+        top: 70px;
+        margin: 0 auto;
+    }
+}
+
+// TV Atenna
+
+.atenna {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.television-atenna {
+    width: 10px;
+    height: 160px;
+    background-color: black;
+    margin: 0 auto;
+    top: 7px;
+    position: relative;
+}
+
+.right {
+    transform: rotate(20deg);
+}
+
+.left {
+    transform: rotate(-20deg);
+}
+
+// TV Legs

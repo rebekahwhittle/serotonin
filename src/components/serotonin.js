@@ -1,7 +1,8 @@
 import React from "react";
 import "../styles/main.scss";
+import Television from "./television";
 
-function serotonin () {
+function serotonin() {
   return (
     <div className="App">
       <header className="App-header">
@@ -12,17 +13,8 @@ function serotonin () {
         </div>
 
         <div className="box">
-          <p>✨spare serotonin ma'am 🥺</p>
-          <a
-            className="App-link"
-            href="https://openpuppies.com/#VDODyNP"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            dear god pls
-          </a>
+          <Television />
         </div>
-
       </header>
     </div>
   );
