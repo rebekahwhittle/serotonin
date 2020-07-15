@@ -11,9 +11,12 @@ function television() {
         <div className="television-atenna left"></div>
         <div className="television-atenna right"></div>
       </div>
+      <div className="screen-image"></div>
       <div className="flex row television-outline">
         <div className="televsion-screen">
-          <canvas id="static" width="380" height="280"></canvas>
+            {/* <img className="screen-source" src={giphy} /> */}
+            {/* <canvas id="static" width="380" height="280"></canvas> */}
+            {/* <Screen></Screen> */}
         </div>
 
         <div className="television-controls"></div>
