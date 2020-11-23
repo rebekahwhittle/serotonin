@@ -22,7 +22,7 @@ function CarouselDemo() {
 
   const fetchGifs = (offset) =>
     giphyFetch.search(search, { offset: offsetN, limit: 1 });
-  return <Carousel fetchGifs={fetchGifs} gifHeight={200} gutter={2} />;
+  return <Carousel fetchGifs={fetchGifs} gifHeight={500} gutter={2} />;
 }
 
 function giphy() {
