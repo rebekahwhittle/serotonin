@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/main.scss";
-import Television from "./television";
+import Giphy from "./giphy";
 
 function serotonin() {
   return (
@@ -11,9 +11,8 @@ function serotonin() {
             <image href="%PUBLIC_URL%/backgroundimage.png"></image>
           </div>
         </div>
-
-        <div className="box">
-          <Television />
+          <Giphy />
+        <div id="root">
         </div>
       </header>
     </div>
