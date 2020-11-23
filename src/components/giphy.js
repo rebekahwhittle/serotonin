@@ -12,17 +12,20 @@ const giphyFetch = new GiphyFetch("sXpGFDGZs0Dv1mmNFvYaGUvYwKX0PWIh");
 function getRandomOffset(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
-let offsetN = getRandomOffset(1000);
+let offsetN = getRandomOffset(500);
 
 // carousel for Gif set of 1
 function CarouselDemo() {
+  // define array of search terms for giphyFetch 
+  let strings = ["cute animals", "kittens", "puppies", "bts", "taylor swift"]; 
+  let search = strings[Math.floor(Math.random() * strings.length)];
+
   const fetchGifs = (offset) =>
-    giphyFetch.search("cute animals", { offset: offsetN, limit: 1 });
+    giphyFetch.search(search, { offset: offsetN, limit: 1 });
   return <Carousel fetchGifs={fetchGifs} gifHeight={200} gutter={2} />;
 }
 
 function giphy() {
-
   return (
     <div className="App">
       <CarouselDemo />
