@@ -20,6 +20,15 @@ function CarouselDemo() {
   let strings = ["cute animals", "kittens", "puppies", "bts", "taylor swift"]; 
   let search = strings[Math.floor(Math.random() * strings.length)];
 
+  // function handleClick(e) {
+  //   if (e.keyCode === 32) {
+  //     e.preventDefault();
+  //     console.log('spacebar');
+  //   }
+  // }
+  // handleClick();
+  // on spacebar click fetchGifs sould run onClick => fetchGifs();
+  // if event equals spacebar (32) then run fetch
   const fetchGifs = (offset) =>
     giphyFetch.search(search, { offset: offsetN, limit: 1 });
   return <Carousel fetchGifs={fetchGifs} gifHeight={500} gutter={2} />;
