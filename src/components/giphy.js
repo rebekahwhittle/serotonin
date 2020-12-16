@@ -9,10 +9,10 @@ import "../styles/main.scss";
 const giphyFetch = new GiphyFetch("sXpGFDGZs0Dv1mmNFvYaGUvYwKX0PWIh");
 
 // define offsetN for carousel call
-function getRandomOffset(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
-let offsetN = getRandomOffset(500);
+  function getRandomOffset(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+  let offsetN = getRandomOffset(500);
 
 // carousel for Gif set of 1
 function CarouselDemo() {
@@ -20,18 +20,24 @@ function CarouselDemo() {
   let strings = ["cute animals", "kittens", "puppies", "bts", "taylor swift"]; 
   let search = strings[Math.floor(Math.random() * strings.length)];
 
-  // function handleClick(e) {
-  //   if (e.keyCode === 32) {
-  //     e.preventDefault();
-  //     console.log('spacebar');
-  //   }
-  // }
-  // handleClick();
-  // on spacebar click fetchGifs sould run onClick => fetchGifs();
-  // if event equals spacebar (32) then run fetch
-  const fetchGifs = (offset) =>
-    giphyFetch.search(search, { offset: offsetN, limit: 1 });
-  return <Carousel fetchGifs={fetchGifs} gifHeight={500} gutter={2} />;
+
+  const handleKeyPress = (offset) => 
+    // console.log("hello world");
+    
+    giphyFetch.search(search, 
+      { offset: offsetN, limit: 1 });
+
+  
+    
+
+    return (
+      <div className="App">
+        {/* <button onClick={handleKeyPress}>
+            Click me!
+        </button> */}
+        <Carousel fetchGifs={handleKeyPress} gifHeight={500} gutter={2} />
+      </div>
+    );
 }
 
 function giphy() {
