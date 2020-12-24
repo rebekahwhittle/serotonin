@@ -9,34 +9,41 @@ import "../styles/main.scss";
 // set key for fetch
 const gf = new GiphyFetch("sXpGFDGZs0Dv1mmNFvYaGUvYwKX0PWIh");
 
+let thisGif;
 
-const carousel = async () => {
+const randomGif = async () => {
+  var aGif;
+
   const getRandomOffset = (max) => {
     return Math.floor(Math.random() * Math.floor(max));
   }
   let offsetN = getRandomOffset(500);
-  console.log(offsetN);
-
 
   let strings = ["cute animals", "kittens", "puppies", "bts", "taylor swift"]; 
   let inputs = strings[Math.floor(Math.random() * strings.length)];
 
   const gifs = await gf.search(inputs, { offset: offsetN });
-  let aGif = gifs.data[0].url;
-  console.log(`carousel`, aGif);
+  aGif = "\""+ gifs.data[0].images.downsized.url+  "\"";
+  console.log(aGif);
 
-  function CarouselDemo() {
-    const fetchGifs = (offset) =>
-      gf.search("dogs", { offset, limit: 10 });
-    return <Carousel fetchGifs={fetchGifs} gifHeight={200} gutter={6} />;
-  }
+  giphy(aGif);
+
 };
 
-function giphy() {
+
+function giphy(aGif) {
+  var aGif = "https://media1.giphy.com/media/KZSU0FEIfsbis441IH/giphy-downsized.gif?cid=9f0f6425zabtehdzk94fw36gdhe4j8nrjxdc0kfpdf3diuzq&rid=giphy-downsized.gif";
+
+  console.log(aGif);
+
   return (
     <div className="App">
-      <button onClick={carousel}>click me!</button>
+      <button onClick={randomGif}>click me!</button>
       <div className="gify">
+        <img 
+            src={aGif}
+            alt="a gif"
+        />
       </div>
     </div>
   );
