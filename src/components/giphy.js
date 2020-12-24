@@ -6,44 +6,26 @@ import { useAsync } from "react-async-hook";
 import "../styles/main.scss";
 
 // set key for fetch
-const giphyFetch = new GiphyFetch("sXpGFDGZs0Dv1mmNFvYaGUvYwKX0PWIh");
+const gf = new GiphyFetch("sXpGFDGZs0Dv1mmNFvYaGUvYwKX0PWIh");
 
-// define offsetN for carousel call
-  function getRandomOffset(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-  }
-  let offsetN = getRandomOffset(500);
-
-// carousel for Gif set of 1
-function CarouselDemo() {
-  // define array of search terms for giphyFetch 
+const carousel = async () => {
   let strings = ["cute animals", "kittens", "puppies", "bts", "taylor swift"]; 
-  let search = strings[Math.floor(Math.random() * strings.length)];
+  let inputs = strings[Math.floor(Math.random() * strings.length)];
 
+  try {
+    const gifs = await gf.search(inputs, { limit: 1 });
+    console.log(`carousel`, gifs);
+  } catch (error) {
+    console.error(`carousel`, error);
+  }
+};
 
-  const handleKeyPress = (offset) => 
-    // console.log("hello world");
-    
-    giphyFetch.search(search, 
-      { offset: offsetN, limit: 1 });
-
-  
-    
-
-    return (
-      <div className="App">
-        {/* <button onClick={handleKeyPress}>
-            Click me!
-        </button> */}
-        <Carousel fetchGifs={handleKeyPress} gifHeight={500} gutter={2} />
-      </div>
-    );
-}
+// carousel();
 
 function giphy() {
   return (
     <div className="App">
-      <CarouselDemo />
+      <button onClick={carousel}>click me!</button>
     </div>
   );
 }
